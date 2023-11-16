@@ -1,0 +1,31 @@
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+* text=auto
+
+# Never modify line endings of our bash scripts
+*.sh -crlf
+
+#
+# The above will handle all files NOT found below
+#
+# These files are text and should be normalized (Convert crlf => lf)
+*.css           text
+*.html          text
+*.js            text
+*.cjs           text
+*.ts            text
+*.jsx           text
+*.txt           text
+*.json          text
+*.txt           text
+*.md            text
+*.svg           text
+*.yaml          text
+.prettierignore text
+.gitignore      text
+
+# These files are binary and should be left untouched
+# (binary is macro for -text -diff)
+*.gif           binary
+*.jpg           binary
+*.png           binary
